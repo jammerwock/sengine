@@ -1,0 +1,3 @@
+sengine_main_homepage:
+    pattern:  /
+    defaults: { _controller: SengineMainBundle:Default:index }

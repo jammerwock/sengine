@@ -1,0 +1,3 @@
+sengine_menu_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: SengineMenuBundle:Default:index }

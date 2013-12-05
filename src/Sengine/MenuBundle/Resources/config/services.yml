@@ -1,0 +1,7 @@
+parameters:
+    admin.menu.class: Sengine\MenuBundle\Admin\MenuAdmin
+
+services:
+    admin.menu:
+        class: %admin.menu.class%
+        arguments: [@service_id, "plain_value", %parameter%]

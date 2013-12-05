@@ -1,0 +1,28 @@
+<?php
+namespace Sengine\MenuBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="menu_type")
+ * @ORM\Entity(repositoryClass="Sengine\MenuBundle\Entity\MenuTypeRepository")
+ */
+class MenuType {
+
+	/**
+	 * @ORM\Id
+	 * @ORM\Column(type="integer")
+	 * @ORM\GeneratedValue(strategy="AUTO")
+	 */
+	protected $id;
+
+	/**
+	 * @ORM\Column(type="string", length=100)
+	 */
+	protected $title;
+
+	/**
+	 * @ORM\OneToMany(targetEntity="Menu", mappedBy="menuTypeId")
+	 */
+	private $typeId;
+}
