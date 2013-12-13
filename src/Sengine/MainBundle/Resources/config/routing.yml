@@ -1,3 +1,6 @@
-sengine_main_homepage:
+sengine_homepage:
     pattern:  /
     defaults: { _controller: SengineMainBundle:Default:index }
+sengine_services:
+    pattern:  /services
+    defaults: { _controller: SengineMainBundle:Default:services }

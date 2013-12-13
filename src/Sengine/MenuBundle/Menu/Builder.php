@@ -30,7 +30,7 @@ class Builder extends ContainerAware
 					->setAttribute("class", "col-sm-6")
 				;
 			} else {
-				$menu->addChild($item->getTitle(), array('uri' => $item->getRoute()));
+				$menu->addChild($item->getTitle(), array('uri' => $this->container->get('request')->getBaseURL().$item->getRoute()));
 			}
 		}
 		return $menu;

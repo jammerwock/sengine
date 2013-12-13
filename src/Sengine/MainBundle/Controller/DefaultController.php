@@ -9,7 +9,6 @@ class DefaultController extends Controller
 {
 	/**
 	 * @Template
-	 *
 	 * @return array
 	 */
 	public function indexAction()
@@ -17,4 +16,12 @@ class DefaultController extends Controller
         return array();
 //        return $this->render('SengineMainBundle:Default:index.html.twig', array('name' => $name));
     }
+
+	/**
+	 * @Template
+	 * @return array
+	 */
+	public function servicesAction(){
+		return array();
+	}
 }

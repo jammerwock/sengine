@@ -1,7 +1,27 @@
 {#{% extends '::base.html.twig' %}#}
 {% extends 'MopaBootstrapBundle::base.html.twig' %}
-{% block title %}Мастердент{% endblock title %}
-{% block headline %}МАСТЕРДЕНТ{% endblock headline %}
+{% block title %}{{'Мастердент' | trans}}{% endblock title %}
+{% block header %}
+	{{ mopa_bootstrap_menu('SengineMenuBundle:Builder:mainMenu') }}
+{% endblock %}
+{% block headline %}{{'Мастердент' | trans | upper}}{% endblock headline %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {#{% block body %}#}
 	{#{% block sidebar %}#}
 		{#<h3>Sidebar!</h3>#}

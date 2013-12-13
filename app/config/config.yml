@@ -106,3 +106,5 @@ mopa_bootstrap:
     initializr: ~
 
 white_october_breadcrumbs: ~
+sonata_admin:
+    title:      Masterdent
