@@ -72,6 +72,7 @@ doctrine:
                     ApplicationSonataUserBundle: ~
                     SonataUserBundle: ~
                     FOSUserBundle: ~
+                    SengineMainBundle: ~
                     SengineMenuBundle: ~
 
 # Swiftmailer Configuration

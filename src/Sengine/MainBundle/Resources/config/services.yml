@@ -5,3 +5,8 @@ services:
 #    sengine_main.example:
 #        class: %sengine_main.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+    sengine_main.admin.service:
+        class: Sengine\MainBundle\Admin\ServiceAdmin
+        arguments: [~, Sengine\MainBundle\Entity\Service, SengineMainBundle:ServiceAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Service}

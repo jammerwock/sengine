@@ -146,7 +146,7 @@ class Menu{
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
