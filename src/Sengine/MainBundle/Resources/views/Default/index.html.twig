@@ -1,5 +1,5 @@
 {% extends 'SengineMainBundle:Default:layout.html.twig' %}
-{% block content %}
+{% block navbar %}
 	{{ parent() }}
-	<h1>Hello!</h1>
+	{{ mopa_bootstrap_menu('SengineMenuBundle:Builder:mainMenu') }}
 {% endblock %}

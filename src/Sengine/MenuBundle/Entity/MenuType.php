@@ -98,4 +98,9 @@ class MenuType {
     {
         return $this->typeId;
     }
+
+	public function __toString()
+	{
+		return $this->title;
+	}
 }

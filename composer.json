@@ -30,7 +30,9 @@
 		"twbs/bootstrap": "v3.0.0",
 		"leafo/lessphp": "dev-master",
 		"knplabs/knp-paginator-bundle": "dev-master",
-		"craue/formflow-bundle": "dev-master"
+		"craue/formflow-bundle": "dev-master",
+		"sonata-project/core-bundle": "~2.2@dev",
+		"whiteoctober/breadcrumbs-bundle": "dev-master"
 	},
 	"scripts": {
 		"post-install-cmd": [

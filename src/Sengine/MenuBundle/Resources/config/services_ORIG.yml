@@ -1,0 +1,16 @@
+services:
+  menu:
+        class: Sengine\MenuBundle\Service\MenuService
+        arguments: [@service_container]
+
+  admin.menu:
+        class: Sengine\MenuBundle\Admin\MenuAdmin
+        tags:
+        - { name:  sonata.admin, manager_type: orm, group: Меню, label: Меню}
+        arguments: [null, Sengine\MenuBundle\Entity\Menu, SonataAdminBundle:CRUD]
+
+  admin.menu_type:
+          class: Sengine\MenuBundle\Admin\MenuTypeAdmin
+          tags:
+          - { name:  sonata.admin, manager_type: orm, group: Меню Тип, label: Меню Тип}
+          arguments: [null, Sengine\MenuBundle\Entity\MenuType, SonataAdminBundle:CRUD]

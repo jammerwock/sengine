@@ -63,15 +63,16 @@ doctrine:
 #        path:     %database_path%
         types:
             json: Sonata\Doctrine\Types\JsonType
-
     orm:
         auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
-#    entity_managers:
-#         default:
-#            mappings:
-#                ApplicationSonataUserBundle: ~
-#                SonataUserBundle: ~
+        entity_managers:
+#            auto_mapping: true
+            default:
+                mappings:
+                    ApplicationSonataUserBundle: ~
+                    SonataUserBundle: ~
+                    FOSUserBundle: ~
+                    SengineMenuBundle: ~
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -103,3 +104,5 @@ mopa_bootstrap:
     menu: ~  # enables twig helpers for menu
     navbar: ~
     initializr: ~
+
+white_october_breadcrumbs: ~

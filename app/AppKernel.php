@@ -21,7 +21,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Sengine\MainBundle\SengineMainBundle(),
+	        new Sengine\MenuBundle\SengineMenuBundle(),
 
+	        new Sonata\CoreBundle\SonataCoreBundle(),
 	        new Sonata\BlockBundle\SonataBlockBundle(),
 	        new Sonata\jQueryBundle\SonatajQueryBundle(),
 	        new Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -34,7 +36,7 @@ class AppKernel extends Kernel
 	        new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
 	        new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 	        new Craue\FormFlowBundle\CraueFormFlowBundle(),
-            new Sengine\MenuBundle\SengineMenuBundle(),
+	        new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

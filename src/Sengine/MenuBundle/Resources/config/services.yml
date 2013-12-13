@@ -1,7 +1,22 @@
 parameters:
+    menu.service: Sengine\MenuBundle\Service\MenuService
     admin.menu.class: Sengine\MenuBundle\Admin\MenuAdmin
+    admin.menu_type.class: Sengine\MenuBundle\Admin\MenuTypeAdmin
+    menu.class: Sengine\MenuBundle\Entity\Menu
+    menu_type.class: Sengine\MenuBundle\Entity\MenuType
 
 services:
+    menu:
+        class: %menu.service%
+        arguments: [@service_container]
     admin.menu:
         class: %admin.menu.class%
-        arguments: [@service_id, "plain_value", %parameter%]
+        arguments: [null, %menu.class%, SonataAdminBundle:CRUD]
+        tags:
+        - {name: sonata.admin, manager_type: orm, group: Меню, label: Пункты меню}
+    admin.menu_type:
+        class: %admin.menu_type.class%
+        arguments: [null, %menu_type.class%, SonataAdminBundle:CRUD]
+        tags:
+        - {name: sonata.admin, manager_type: orm, group: Меню, label: Типы меню}
+

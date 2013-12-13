@@ -16,7 +16,7 @@ class MenuAdmin extends Admin{
 			->add('alias', null, array())
 			->add('static', null, array('required' => false))
 			->add('menuTypeId', 'sonata_type_model', array(
-					'class'=>'MenuBundle:MenuType',
+					'class'=>'SengineMenuBundle:MenuType',
 					'property'=>'title',
 					'required' => false
 				)
@@ -48,7 +48,7 @@ class MenuAdmin extends Admin{
 			->add('route', null, array())
 			->add('id', null, array())
 			->add('menuTypeId', 'entity', array(
-					'class'=>'MenuBundle:MenuType',
+					'class'=>'SengineMenuBundle:MenuType',
 					'property'=>'title'
 				)
 			)
