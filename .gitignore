@@ -9,4 +9,7 @@
 /vendor/
 /bin/
 /composer.phar
-idea
+.idea
+README*
+UPGRADE*
+LICENSE*
