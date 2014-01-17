@@ -7,6 +7,6 @@ services:
 #        arguments: [@service_id, "plain_value", %parameter%]
     sengine_main.admin.service:
         class: Sengine\MainBundle\Admin\ServiceAdmin
-        arguments: [~, Sengine\MainBundle\Entity\Service, SengineMainBundle:ServiceAdmin]
+        arguments: [~, Sengine\MainBundle\Entity\Service, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Service}
+            - {name: sonata.admin, manager_type: orm, group: Материалы, label: Услуги}

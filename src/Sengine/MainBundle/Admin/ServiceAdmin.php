@@ -17,6 +17,7 @@ class ServiceAdmin extends Admin
     {
         $datagridMapper
             ->add('id')
+            ->add('alias')
             ->add('name')
             ->add('content')
         ;
@@ -29,6 +30,7 @@ class ServiceAdmin extends Admin
     {
         $listMapper
             ->add('id')
+            ->add('alias')
             ->add('name')
             ->add('content')
             ->add('_action', 'actions', array(
@@ -47,9 +49,10 @@ class ServiceAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
+            ->add('id','hidden')
+            ->add('alias')
             ->add('name')
-            ->add('content')
+            ->add('content','textarea')
         ;
     }
 
@@ -60,6 +63,7 @@ class ServiceAdmin extends Admin
     {
         $showMapper
             ->add('id')
+            ->add('alias')
             ->add('name')
             ->add('content')
         ;

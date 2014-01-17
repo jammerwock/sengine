@@ -22,6 +22,7 @@ class DefaultController extends Controller
 	 * @return array
 	 */
 	public function servicesAction(){
-		return array();
+		$services = $this->container->get('doctrine')->getRepository('SengineMainBundle:Service')->findAll();
+		return array('services' => $services);
 	}
 }

@@ -1,0 +1,9 @@
+{% extends 'SengineMainBundle:Default:service.html.twig' %}
+{% block content_content %} Services
+<ul>
+	{% for service in services %}
+		<li><a href="/{{ service.id }}">{{ service.name }}</a></li>
+	{% endfor %}
+</ul>
+	
+{% endblock %}

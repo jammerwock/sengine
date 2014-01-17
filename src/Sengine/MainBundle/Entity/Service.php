@@ -24,6 +24,13 @@ class Service
     /**
      * @var string
      *
+     * @ORM\Column(name="alias", type="string", length=255, unique=true)
+     */
+    private $alias;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
@@ -44,6 +51,29 @@ class Service
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set alias
+     *
+     * @param string $alias
+     * @return Service
+     */
+    public function setAlias($alias)
+    {
+        $this->alias = $alias;
+    
+        return $this;
+    }
+
+    /**
+     * Get alias
+     *
+     * @return string 
+     */
+    public function getAlias()
+    {
+        return $this->alias;
     }
 
     /**
@@ -70,25 +100,25 @@ class Service
     }
 
     /**
-     * Set ccontent
+     * Set content
      *
-     * @param string $ccontent
+     * @param string $content
      * @return Service
      */
-    public function setCcontent($ccontent)
+    public function setContent($content)
     {
-        $this->ccontent = $ccontent;
+        $this->content = $content;
     
         return $this;
     }
 
     /**
-     * Get ccontent
+     * Get content
      *
      * @return string 
      */
-    public function getCcontent()
+    public function getContent()
     {
-        return $this->ccontent;
+        return $this->content;
     }
 }
